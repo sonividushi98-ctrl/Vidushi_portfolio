@@ -612,3 +612,11 @@ main {
     transition: none !important;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.portfolio-section {
+  scroll-margin-top: 90px;
+}

@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import PageTransition from "../components/PageTransition.jsx";
-import SectionTitle from "../components/SectionTitle.jsx";
 import { projectFilters, projects } from "../data/portfolioData.js";
 import { usePrefersReducedMotion } from "../hooks/useReducedMotion.js";
 
@@ -22,11 +21,13 @@ export default function Projects() {
   return (
     <PageTransition>
       <section className="section">
-        <SectionTitle
-          eyebrow="Work"
-          title="Projects"
-          subtitle="Filter by technology to explore the stack used in each project."
-        />
+        {/* Heading — same style as About page */}
+        <header className="section-title">
+          <p className="eyebrow">Work</p>
+          <h2>Projects</h2>
+          <p className="muted">Filter by technology to explore the stack used in each project.</p>
+        </header>
+
         <div className="filter-bar" role="tablist" aria-label="Filter projects by technology">
           {projectFilters.map((tag) => (
             <button
@@ -39,6 +40,7 @@ export default function Projects() {
             </button>
           ))}
         </div>
+
         <div className="cards-grid">
           <AnimatePresence mode="popLayout">
             {visible.map((project) => (
@@ -72,13 +74,14 @@ export default function Projects() {
                   </a>
                   {project.live ? (
                     <a
-                      className="btn btn-primary"
+                      className="btn btn-live"
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FiExternalLink aria-hidden="true" />
+                      <span className="live-dot" aria-hidden="true" />
                       Live
+                      <FiExternalLink aria-hidden="true" />
                     </a>
                   ) : (
                     <button type="button" className="btn btn-disabled" disabled>

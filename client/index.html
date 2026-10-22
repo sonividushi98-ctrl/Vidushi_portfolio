@@ -375,7 +375,7 @@ body{margin:0;background:#0a1a6a;overflow-x:hidden}
         <svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg>
       </span>
     </a>
-    <a class="btn primary" href="https://drive.google.com/file/d/1d03pD5STIeREmpsE1zQhZ818u3QvJD7Z/view?usp=drive_link" target="_blank" rel="noopener">
+    <a class="btn primary" href="https://drive.google.com/file/d/1iE4c-5fxklGYdknMZDbW2PBuSGcP5u5O/view?usp=sharing" target="_blank" rel="noopener">
       <span>Download CV (PDF)</span>
       <span class="icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></svg>
@@ -675,6 +675,7 @@ background:linear-gradient(180deg,#0b0f45 0%,#0a1a6a 28%,#0a3a88 62%,#00598f 100
 .left{position:relative;overflow:hidden;background:
   linear-gradient(180deg,#0b0f45 0%,#0a1a6a 12%,#0a3a88 28%,#00598f 45%,#0a79a4 60%,#3f98b8 70%,#8cc4d6 78%,#cdeaf1 86%,#eefafc 100%)}
 .left::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1.5 0 0 0 -.25 0 1.5 0 0 -.25 0 0 1.5 0 -.25 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:260px 260px;mix-blend-mode:overlay;opacity:.6}
+.hd{position:absolute;z-index:4;top:clamp(24px,6vh,64px);left:clamp(20px,6vw,90px);margin:0;color:#fff;font-size:clamp(34px,5vw,56px);font-weight:700;letter-spacing:-.035em}
 .pills{position:absolute;left:clamp(20px,10%,233px);top:0;height:100%}
 .pill{position:absolute;left:0;top:0;height:64px;padding:0 40px;display:flex;align-items:center;border:1.5px solid rgba(255,255,255,.7);border-radius:999px;color:#fff;font-size:clamp(18px,2vw,32px);letter-spacing:-.03em;white-space:nowrap;will-change:transform;overflow:hidden}
 .f{position:absolute;inset:0;display:flex;align-items:center;padding:0 40px;background:#fff;color:#111;clip-path:inset(0 0 100% 0);will-change:clip-path}
@@ -698,7 +699,7 @@ background:linear-gradient(180deg,#0b0f45 0%,#0a1a6a 28%,#0a3a88 62%,#00598f 100
 .tag{font-size:12px;padding:5px 12px;border-radius:999px;background:#fff;color:#0b1430;font-weight:500}
 .tag.o{background:transparent;color:#c9d2e6;border:1px solid #ffffff33;font-weight:400}
 .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:30px;padding-top:22px;border-top:1px solid #ffffff1f}
-.live{display:inline-flex;align-items:center;gap:8px;background:#000;color:#fff;font-size:13px;font-weight:500;padding:6px 12px 6px 12px;border-radius:999px;border:1px solid #ffffff26}.live{padding:4px 4px 4px 12px}.live .ar{width:24px;height:24px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center}.live .ar .ic{width:14px;height:14px;stroke-width:2}
+.live{display:inline-flex;align-items:center;gap:8px;background:#000;color:#fff;font-size:13px;font-weight:500;padding:6px 12px 6px 12px;border-radius:999px;border:1px solid #ffffff26;text-decoration:none;cursor:pointer}.live{padding:4px 4px 4px 12px}.live .ar{width:24px;height:24px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center}.live .ar .ic{width:14px;height:14px;stroke-width:2}
 .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 #22c55e88}
 @media (prefers-reduced-motion:no-preference){.dot{animation:blink 1.4s ease-in-out infinite}}
 @keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 #22c55e88}50%{opacity:.25;box-shadow:0 0 0 5px #22c55e00}}
@@ -760,7 +761,7 @@ background:linear-gradient(180deg,#0b0f45 0%,#0a1a6a 28%,#0a3a88 62%,#00598f 100
 </svg>
 
 <div class="track" id="track"><div class="sticky">
-  <div class="left"><div class="pills" id="pills"></div></div>
+  <div class="left"><h2 class="hd">Projects</h2><div class="pills" id="pills"></div></div>
   <div class="right"><div class="deck" id="deck"></div></div>
 </div></div></div></template>
 <template id="t-experience"><style>
@@ -1428,7 +1429,7 @@ d:"Upload a pet photo to get AI-powered vet and medicine recommendations, then b
 tags:[["Python"],["Flask"],["HTML/CSS"],["Blockchain",1],["AI vision",1]],url:"https://github.com/sonividushi98-ctrl/LNMIT-project"},
 {t:"Virtual closet",hub:["spark","AI/ML analysis"],src:[["img","Clothing images"],["palette","Style profile"],["bag","Shopping picks"]],out:["shirt","Outfits"],
 d:"Analyzes uploaded clothing images to generate outfit combinations and personalized shopping suggestions that match the user’s style. Built with rapid prototyping, iterating on core features within tight timelines.",
-tags:[["Python"],["Flask"],["HTML/CSS"],["AI/ML"],["Rapid prototyping",1]],url:"https://github.com/sonividushi98-ctrl/Virtual-closet"}
+tags:[["Python"],["Flask"],["HTML/CSS"],["AI/ML"],["Rapid prototyping",1]],url:"https://github.com/sonividushi98-ctrl/Virtual-closet",live:"https://virtualcloset-gdbn-6bbre09g7-sonividushi2118-techs-projects.vercel.app"}
 ];
 var N=P.length,pillsEl=root.getElementById('pills'),deck=root.getElementById('deck'),track=root.getElementById('track');
 track.style.height=(N*300)+'vh';
@@ -1442,9 +1443,10 @@ P.forEach(function(p){
  nodes+='<div class="n hub" style="left:52%;top:50%">'+ic(p.hub[0])+'</div><div class="l" style="left:52%;top:calc(50% + 36px)">'+p.hub[1]+'</div>';
  nodes+='<div class="n" style="left:88%;top:50%">'+ic(p.out[0])+'</div><div class="l" style="left:88%;top:calc(50% + 32px)">'+p.out[1]+'</div>';
  var tags=p.tags.map(function(g){return '<span class="tag'+(g[1]?' o':'')+'">'+g[0]+'</span>'}).join('');
+ var liveHtml=p.live?('<a class="live" href="'+p.live+'" target="_blank" rel="noopener"><span class="dot"></span>Live<span class="ar">'+ic('arrow')+'</span></a>'):('<span class="live"><span class="dot"></span>Live<span class="ar">'+ic('arrow')+'</span></span>');
  var c=document.createElement('article');c.className='card'+(['','ocean','paper'][P.indexOf(p)]?' '+['','ocean','paper'][P.indexOf(p)]:'');
  c.innerHTML='<h2>'+p.t+'</h2><div class="stage"><svg class="w" viewBox="0 0 100 320" preserveAspectRatio="none" aria-hidden="true">'+paths+'</svg>'+nodes+'</div><p class="d">'+p.d+'</p><div class="tags">'+tags+'</div>'+
- '<div class="foot"><span class="live"><span class="dot"></span>Live<span class="ar">'+ic('arrow')+'</span></span><a class="gh" href="'+p.url+'" target="_blank" rel="noopener" aria-label="View '+p.t+' on GitHub"><span class="mk">'+ic('gh')+'</span></a></div>';
+ '<div class="foot">'+liveHtml+'<a class="gh" href="'+p.url+'" target="_blank" rel="noopener" aria-label="View '+p.t+' on GitHub"><span class="mk">'+ic('gh')+'</span></a></div>';
  deck.appendChild(c);
 });
 var pills=[].slice.call(pillsEl.children),cards=[].slice.call(deck.children);

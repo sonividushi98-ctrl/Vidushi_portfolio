@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FiDownload } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 import SocialLinks from "./SocialLinks.jsx";
 import { profile, resumeLinks } from "../data/portfolioData.js";
 import { usePrefersReducedMotion } from "../hooks/useReducedMotion.js";
@@ -40,13 +40,23 @@ export default function Hero() {
         </p>
         <p className="muted hero-status">{profile.status}</p>
         <div className="hero-actions">
-          <a className="btn btn-primary" href={resumeLinks.pdf}>
-            <FiDownload aria-hidden="true" />
-            Download CV (PDF)
+          <a
+            className="btn btn-primary"
+            href={resumeLinks.pdf}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiExternalLink aria-hidden="true" />
+            View CV (PDF)
           </a>
-          <a className="btn btn-ghost" href={resumeLinks.docx}>
-            <FiDownload aria-hidden="true" />
-            Download CV (Word)
+          <a
+            className="btn btn-ghost"
+            href={resumeLinks.docx}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiExternalLink aria-hidden="true" />
+            View CV (Word)
           </a>
         </div>
         <SocialLinks />

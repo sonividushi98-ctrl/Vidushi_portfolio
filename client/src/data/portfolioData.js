@@ -81,7 +81,7 @@ export const projects = [
       "AI-based fashion recommendation web app that analyzes uploaded clothing images to generate outfit combinations and personalized shopping suggestions tailored to user style. Built with rapid prototyping to iterate within tight timelines.",
     tech: ["Python", "Flask", "HTML", "CSS", "AI/ML"],
     github: "https://github.com/sonividushi98-ctrl/Virtual-closet",
-    live: "https://virtualcloset-gdbn.vercel.app/",
+    live: "https://virtualcloset-gdbn-6bbre09g7-sonividushi2118-techs-projects.vercel.app",
   },
 ];
 
@@ -143,7 +143,8 @@ export const apiBase = (import.meta.env.VITE_API_URL || "http://localhost:5000")
   ""
 );
 
+// Resume / CV — hosted on Google Drive
 export const resumeLinks = {
-  pdf: `${apiBase}/api/resume/pdf`,
-  docx: `${apiBase}/api/resume/docx`,
+  pdf: "https://drive.google.com/file/d/1iE4c-5fxklGYdknMZDbW2PBuSGcP5u5O/view?usp=sharing",
+  docx: "https://drive.google.com/file/d/1iE4c-5fxklGYdknMZDbW2PBuSGcP5u5O/view?usp=sharing",
 };

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiX } from "react-icons/fi";
+import { FiX, FiArrowUpRight } from "react-icons/fi";
 import ContactForm from "./ContactForm.jsx";
-import { profile } from "../data/portfolioData.js";
+import { profile, resumeLinks } from "../data/portfolioData.js";
 import { usePrefersReducedMotion } from "../hooks/useReducedMotion.js";
 
 export default function Footer() {
@@ -80,7 +80,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="footer-btn-dark-label">Download CV</span>
+                  <span className="footer-btn-dark-label">View CV</span>
                   <span className="footer-btn-arrow" aria-hidden="true">
                     <FiArrowUpRight />
                   </span>

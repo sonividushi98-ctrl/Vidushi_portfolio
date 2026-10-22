@@ -891,3 +891,50 @@ html {
 .portfolio-section {
   scroll-margin-top: 90px;
 }
+
+
+/* Projects page — prominent h1 heading */
+.page-heading {
+  margin: 0 0 4px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+/* ── Live button with blinking green dot ── */
+@keyframes blink-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+.btn-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 200, 100, 0.12);
+  border: 1px solid rgba(0, 200, 100, 0.4);
+  color: #00e676;
+  font-weight: 700;
+  padding: 11px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-live:hover {
+  background: rgba(0, 200, 100, 0.22);
+  border-color: #00e676;
+  transform: translateY(-1px);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00e676;
+  box-shadow: 0 0 6px #00e676;
+  animation: blink-dot 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}

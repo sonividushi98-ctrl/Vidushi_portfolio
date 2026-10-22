@@ -1547,7 +1547,7 @@ readTarget();cur=target;loop();
   closeBtn.addEventListener('click',close);
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&box.classList.contains('open'))close()});
 
-  var EMAILJS_SERVICE_ID='YOUR_SERVICE_ID',EMAILJS_TEMPLATE_ID='YOUR_TEMPLATE_ID',EMAILJS_PUBLIC_KEY='YOUR_PUBLIC_KEY';
+  var EMAILJS_SERVICE_ID='service_fg6fguc',EMAILJS_TEMPLATE_ID='template_69trprl',EMAILJS_PUBLIC_KEY='JCEWJcGePhAZv-nnn';
   var TO='sonividushi98@gmail.com',sendBtn=root.getElementById('send'),err=root.getElementById('err');
   function doSend(e){
     if(e)e.preventDefault();
@@ -1557,6 +1557,7 @@ readTarget();cur=target;loop();
     desc.style.borderColor=msg?'':'#ff9b9b';
     if(!ok){err.textContent='Please enter a valid email address.';email.focus();return}
     if(!msg){err.textContent='Please add a short description.';desc.focus();return}
+    if([EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,EMAILJS_PUBLIC_KEY].some(function(v){return /^YOUR_/.test(v)})){err.textContent='Template ID or Public Key is not set yet in the contact script.';return}
     close();
     morph.classList.add('mini','sending');
     // EmailJS REST API: every message is delivered to sonividushi98@gmail.com
@@ -1578,7 +1579,7 @@ readTarget();cur=target;loop();
       console.error('Send failed:',x);
       morph.classList.remove('sending','mini');
       open();
-      err.textContent='Could not send right now. Please email '+TO+' directly.';
+      err.textContent=(String(x&&x.message||x).slice(0,140))||('Could not send. Please email '+TO+' directly.');
     });
   }
   sendBtn.addEventListener('click',doSend);

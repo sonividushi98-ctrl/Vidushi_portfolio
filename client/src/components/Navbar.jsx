@@ -10,7 +10,6 @@ const links = [
   { to: "#projects", label: "Projects" },
   { to: "#journey", label: "Journey" },
   { to: "#achievements", label: "Achievements" },
-  { to: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -42,6 +41,19 @@ export default function Navbar() {
     }
   };
 
+  const openContact = () => {
+    setOpen(false);
+    window.dispatchEvent(new Event("portfolio:open-contact"));
+    // Expand first, then scroll: the footer grows when the form opens, and
+    // scrolling during that layout change would cancel the smooth scroll.
+    window.setTimeout(() => {
+      document.getElementById("footer")?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }, 600);
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-inner">
@@ -67,6 +79,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <button
+            type="button"
+            className="contact-btn"
+            onClick={openContact}
+          >
+            Contact
+          </button>
         </nav>
 
         <div className="nav-actions">

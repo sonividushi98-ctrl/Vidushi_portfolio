@@ -6,7 +6,6 @@ import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import Journey from "./pages/Journey.jsx";
 import Achievements from "./pages/Achievements.jsx";
-import Contact from "./pages/Contact.jsx";
 
 export default function App() {
   const location = useLocation();
@@ -43,10 +42,6 @@ export default function App() {
 
         <section id="achievements" className="portfolio-section">
           <Achievements />
-        </section>
-
-        <section id="contact" className="portfolio-section">
-          <Contact />
         </section>
       </AnimatePresence>
     </Layout>
